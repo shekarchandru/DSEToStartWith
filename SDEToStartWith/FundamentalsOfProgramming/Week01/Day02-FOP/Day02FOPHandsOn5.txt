@@ -1,0 +1,13 @@
+5)Create an App for a College which enables one to initialize the College Details as follows
+CollegeId
+CollegeName
+CollegAddress
+CollegeLicenseNo
+StudentCapacity
+Category [Medical/Preuniversity/Degree/Engg]
+StaffNumbers
+AcademicHead
+Facility should be made to accept the data from the user and options should be given
+both to initialize through Constructors as well as Getters/Setters
+the functions to display the same should be allowed
+

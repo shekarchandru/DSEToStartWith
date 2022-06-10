@@ -1,0 +1,40 @@
+
+EXTRA EXERCISES
+1) Modify the above program to repeat based on the users requirement(i.e hint:Use While loop) 
+
+2)Write a program to display first 10 even Numbers(Use for loop)
+
+
+Java Basic Programming Exercises
+
+3)Write a program to accept a number and find if it is divible by 5, if it is even or odd and also if it is non zero, use if - else if constructs
+
+4)Write a program to perform the following activities
+a) accept Television details like size,type-b&w/color,cost
+if the size is 14 inch and type is b&w discount is 8%
+if the size is 14 inch and type is col discount is 10%
+if the size is 20 inch and type is b&w discount is 12 %
+if the size is 20 inch and type is col discount is 14 %
+(Hint:use if else if construct use nested if when required)
+
+5)Write a program to perform the following activities.
+1)accept a string
+2)Reverse a string
+3)Check if a string is a palindrome
+4)Exit
+use  switch case construct.
+
+6)Write a program to accept name and address of the Customers repeat the activity as long as user wishes to , using a while loop.
+
+7)Write a program to accept the Employee Salary if the salary is above 10k and <= 15k calculate the bonus as 10% and if the salary is > 15K and less than 25K calculate the bonus as 8% and above 25K calculate bonus as 6%, other than this range user should be able to continue the activity of accepting salary and calculating the bonus as long as user wishes(use while loop) if user,if the user enters different range of salary it should allow him to continue the loop by giving an appropriate message(use continue)
+
+8)Write a program to display all even numbers upto 20
+
+9) write a program to display the squares of all No.s upto 20
+
+
+
+10)Create a program having a student class with data members id ,name ,marks1 and marks2
+and method to display the id,name,marks and average marks.
+Use properties to set and retrieve the values
+

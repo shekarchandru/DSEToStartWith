@@ -1,0 +1,1 @@
+1)Analyze the process of making a call by using a pay phone . identify the objects involved and the behaviour of these objects.Also identify the messages passed between the objects for interacting with each other.

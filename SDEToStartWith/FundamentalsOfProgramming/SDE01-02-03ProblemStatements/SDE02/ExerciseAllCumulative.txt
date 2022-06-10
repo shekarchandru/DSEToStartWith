@@ -1,0 +1,82 @@
+
+----------------------------------------------------------------------------
+Parser Exercise:
+Write a piece of code that will query a URL that returns JSON and can parse the JSON string to pull out pieces of information. The information that should be parsed and returned is the pageid and the list of “See Also” links. Those links should be formatted to be actual links that can be used by a person to find the appropriate article.
+Use the Wikipedia API for the query.  A sample query is:
+http://en.wikipedia.org/w/api.php?format=json&action=query&titles=SMALL&prop=revisions&rvprop=content
+Other queries can be generated changing the “titles” portion of the query string. The code to parse the JSON and pull the “See Also” links should be generic enough to work on any Wikipedia article. 
+All inputs and outputs can occur through the command line.
+Extra work, have output write to a file.
+-----------------------------------------------------------------------------
+Martha's Subway Problem:
+Martha is interviewing at Subway. One of the rounds of the interview requires her to cut a bread of size l×b into smaller identical pieces such that each piece is a square having maximum possible side length with no left over piece of bread.
+Input format
+The first line contains an integer T. T lines follow. Each line contains two space separated integers l and b which denote length and breadth of the bread.
+Output format
+T lines, each containing an integer that denotes the number of squares of maximum size, when the bread is cut as per the given condition.
+Constraints
+1 <= T <= 1000
+1 <= l, b <= 1000
+Sample Input
+2
+2 2
+6 9
+Sample Output
+
+1
+6
+Explanation
+The 1st testcase has a bread whose original dimensions are 2×2, the bread is uncut and is a square. Hence the answer is 1.
+The 2nd testcase has a bread of size 6×9. We can cut it into 54 squares of size 1×1, 0 of size 2×2, 6 of size 3×3, 0 of size 4×4, 0 of size 5×5 and 0 of size 6×6. The number of squares of maximum size that can be cut is 6.
+-----------------------------------------------------------------------------
+Solve Church's Bench Problem;
+There is a church, where you have n number of benches on the left and n on the right.
+it has currently 8 benches on the left and 8 on the right.
+each bench holds 10 people.
+on special occasions they would increase the left and right by i nos., equally/unequally but there is either people needing
+more benches or benches left empty, now your job is to optimize this in such a way that for a particular occassion
+there should be no benches left blank nor it should be overcrowded.find the no. i.
+the logic should be based on the data available as follows
+on any annual event i.e p numbered event say 17th year
+for last p years the turnout have been in the order
+----
+p-1 ---> 17 * 10 = 170
+
+p-2 ---> (17 * 10 ) - 10 = 160
+
+p-3 ---> ((17 * 10 ) - 10)+ 12 =172
+
+p-4 --> (((17 * 10 ) - 10)+ 12) - 14 = 158
+
+p-5 --> ((((17 * 10 ) - 10)+ 12) - 14)+16 = 174
+
+p-6 --> (((((17 * 10 ) - 10)+ 12) - 14)+16) -18=156
+
+p-7 --> (((((17 * 10 ) - 10)+ 12) - 14)+16) -18) + 20 = 176
+
+p-8 --> ((((((17 * 10 ) - 10)+ 12) - 14)+16) -18) + 20) -22 =154
+
+p-9 --> (((((((17 * 10 ) - 10)+ 12) - 14)+16) -18) + 20) -22)+24=178
+
+p-10 -->((((((((17 * 10 ) - 10)+ 12) - 14)+16) -18) + 20) -22)+24)-26=152
+
+p-11  --> 152 + 28 =180
+
+p-12 -->  180 -30 = 150
+
+p-13 --> 150 +32 = 182
+
+p-14 --> 182 -34 = 146
+
+p-15 -->  146 +36 = 182
+
+p-16 --> 182 - 38 = 144
+p 's turnout is 170+38 again i.e 208 and again this process continues backward
+given p th year p-1 crowd is p * 10 goes downward until -38 so pth year crowd is 208 you need 5 benches additional
+and so on
+year always should  be greater than 10.
+Accordingly find for a given year of Event what could be the crowd expected and accordingly
+how many more benches have to be added on both the sides
+Round of the benches say if there are 18 more people expected
+benches could be 3(2 on the left and 1 on the right) give priority on the left when unequal no.s arise.
+-----------------------------------------------------------

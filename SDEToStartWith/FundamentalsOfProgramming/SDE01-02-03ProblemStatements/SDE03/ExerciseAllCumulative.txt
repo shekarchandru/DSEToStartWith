@@ -1,0 +1,178 @@
+Matrix problem....
+Doubly-Even Magic Squares Question
+
+This programming exercise is a follow-on from Odd Magic Squares. You will need the program you made from that exercise or alternatively you could use the version that can be found on the Odd Magic Squares solution page.
+You could be forgiven for thinking that I'm going to ask you to add a new method to the odd magic squares program so that it creates even magic squares (e.g., 2x2, 4x4, 6x6).
+However, when it comes to even numbers and magic squares things get a little bit tricky. Therefore the goal of this programming exercise is to create doubly-even magic squares. Yes that's right, just when you think numbers are either odd or even, someone comes up with the idea of doubly-even. These are numbers that are divisible by four. In terms, of our magic squares these are squares like 4x4, 8x8, 12x12, 16x16 etc..
+To make a doubly-even magic square consider the sequence of numbers that make up the square. For example, a 4x4 square is made up of the numbers 1 to 16. If we fill up the square sequentially from the top left corner to the bottom right we would get:
+ 1  2  3  4
+
+  5  6  7  8
+
+  9 10 11 12
+
+13 14 15 16
+The trick is to fill the squares according to a generic pattern. Split the magic square so that there is a mini-square at each corner and a large square in the center. The size of a mini-square is the length of the magic square divided by 4 (i.e., for a 4x4 it would be 4/4=1, therefore each mini-square is 1x1) and the size of the large square is double the size of the mini-square (i.e., 2x2):
+For a 4x4 square the pattern is a 1x1 mini-square in each corner and a 2x2 square in the center:
+#      #
+
+   #  #  
+
+   #  #  
+
+#      #
+Only fill in the sequential numbers where there are squares in the pattern:
+  1       4
+
+     6  7   
+
+    10 11
+
+13      16
+With the remaining numbers in the sequence start at the top row and going from left to right count downwards filling in the squares (i.e., 15,14 fit into the first row, 12,9 into the second row and so on). What you should end up with is:
+
+ 1 15 14  4
+12  6  7  9
+  8 10 11  5
+13  3  2 16
+Program Requirements:
+    a user must be able to enter in the size of the magic square
+    they must only be allowed to enter in an odd or doubly-even number
+    add a new method to the odd magic squares program to create the doubly-even magic square
+    the program should display the square
+    the program should display the magic constant (i.e., the sum of all the numbers in a row or column or diagonal)
+Can your program create the 8 x 8 magic square below?
+  1  2 62 61 60 59  7  8
+  9 10 54 53 52 51 15 16
+48 47 19 20 21 22 42 41
+40 39 27 28 29 30 34 33
+32 31 35 36 37 38 26 25
+24 23 43 44 45 46 18 17
+49 50 14 13 12 11 55 56
+57 58  6  5  4  3 63 64 
+link for Magic Matrix:use following hyperlink hyperlink
+Odd Magic Squares in Java - Programming Exercise:
+actual link : http://java.about.com/od/beginnerlevel/a/oddmagicsquare.htm
+--------------------------------------------------------------------
+Apple's Problem of Bulbs
+This riddle is reported to be a question Apple asks potential employees to solve in interviews. So how do you get on?
+Question: You have 100 light bulbs lined up in a row. You walk past them and turn them all on in the first pass. Then,
+starting at the same end, you go along and switch every other light bulb off... so all even-numbered light bulbs are now
+turned off.
+Now, you go back again and switch every third light bulb. But, any light bulb that is off is turned back on, and any light
+bulb that is on, is turned off.
+You go back again and switch every fourth bulb, if it is on you turn it off and vice-versa.
+Then you repeat this process for every fifth bulb, and every sixth bulb, and every seventh bulb... up to 100 passes.
+So, clever clogs, how many light bulbs are on after 100 passes?
+Generalize an algorithm so that , for a given n number of bulbs for a given no. of passes how many would be on?
+---------------------------------------------------
+Dexter's Problem
+Dexter loves to solve problems. This time his friend Ashish decides to challenge him.
+
+Ashish gives him number N, all the numbers from 1 to N can be arranged in a 2-D matrix. There can be multiple arrangements such that the value of a palpak is maximized.
+What is palpak?
+Suppose the matrix made by arranging the numbers is A
+A new matrix is made from A (say B) whose values are calculated as:
+Let the number of rows be N
+Let the number of columns be M
+for i from 1 to N 
+      for j from 1 to M 
+            B[i][j]=A[i][j] 
+            for k from i+1 to N 
+                  B[i][j]=B[i][j]%A[k][j]
+palpak is the value calculated from the matrix B as follows:
+
+palpak=1
+for i from 1 to N
+      sum=0
+      for j from 1 to M
+            sum=sum+B[i][j]
+	            palpak=palpak*sum
+Dexter is trying hard to solve this problem. Please help Dexter in solving this problem.
+Input Format
+The first line contains T, the number of test cases.
+Then N numbers follow.
+Output Format
+Output the query of Dexter mod 1000000007.
+Constraints
+1 <= T <= 10
+1 <= N <= 1000
+Sample Input
+(Plaintext Link)
+2
+1
+3
+Sample Output(Plaintext Link)
+1
+6
+
+Explanation
+Test Case 1: Only one matrix is possible: A = [1] B = [1] palpak=1
+Test Case 2: The dimensions of matrix possible are 1X3 and 3X1. Out of many possible matrix the one which produces maximum palpak is: A=[1 2 3] B=[1 2 3] palpak=1+2+3=6
+--------------------------------------------------------------------
+-----------------------------------------------------------
+Solve Professors Problem:
+The professor is conducting a course on Discrete Mathematics to a class of N students. He is angry at the lack of their discipline, and he decides to cancel the class if there are fewer than K students present after the class starts.
+Given the arrival time of each student, your task is to find out if the class gets cancelled or not.
+Input Format
+The first line of the input contains T, the number of test cases. Each test case contains two lines.
+The first line of each test case contains two space-separated integers, N and K.
+The next line contains N space-separated integers, a1,a2,…,aN, representing the arrival time of each student.
+If the arrival time of a given student is a non-positive integer (ai=0), then the student enters before the class starts. If the arrival time of a given student is a positive integer (ai>0), the student enters after the class has started.
+Output Format
+For each testcase, print "YES" (without quotes) if the class gets cancelled and "NO" (without quotes) otherwise.
+Constraints
+    1=T=10
+
+    1=N=1000
+
+    1=K=N
+
+    -100=ai=100,where i?[1,N]
+Note
+If a student enters the class exactly when it starts (ai=0), the student is considered to have entered before the class has started.
+Sample Input
+2
+
+4 3
+
+-1 -3 4 2
+
+4 2
+
+0 -1 2 1
+Sample Output
+YES
+NO
+Explanation
+For the first test case, K=3, i.e., the professor wants at least 3 students to be in class but there are only 2 who have arrived on time (-3 and -1), hence the class gets cancelled.
+For the second test case, K=2, i.e, the professor wants at least 2 students to be in class and there are 2 who have arrived on time (0 and -1), hence the class does not get cancelled
+-----------------------------------------------------------------------------------
+Solve Jims Flying Issue:
+Jim has invented a new flying object called HZ42. HZ42 is like a broom and can only fly horizontally, independent of the environment. One day, Jim started his flight from Dubai's highest skyscraper, traveled some distance and landed on another skyscraper of same height! So much fun! But unfortunately, new skyscrapers have been built recently.
+Let us describe the problem in one dimensional space. We have in total N skyscrapers aligned from left to right. The ith skyscraper has a height of hi. A flying route can be described as (i,j) with i?j, which means, Jim starts his HZ42 at the top of the skyscraper i and lands on the skyscraper j. Since HZ42 can only fly horizontally, Jim will remain at the height hi only. Thus the path (i,j) can be valid, only if each of the skyscrapers i,i+1,...,j-1,j is not strictly greater than hi and if the height of the skyscraper he starts from and arrives on have the same height. Formally, (i,j) is valid iff ??k?[i,j]:hk>hi and hi=hj.
+
+ Help Jim in counting the number of valid paths represented by ordered pairs (i,j).
+Input Format
+The first line contains N, the number of skyscrapers. The next line contains N space separated integers representing the heights of the skyscrapers.
+Output Format
+Print an integer that denotes the number of valid routes.
+Constraints
+1=N=3·105 and no skyscraper will have height greater than 106 and lesser than 1.
+Sample Input #00
+6
+3 2 1 2 3 3
+Sample Output #00
+8
+Sample Input #01
+3
+1 1000 1
+Sample Output #01
+0
+Explanation
+First testcase: (1, 5), (1, 6) (5, 6) and (2, 4) and the routes in the opposite directions are the only valid routes.
+Second testcase: (1, 3) and (3, 1) could have been valid, if there wasn't a big skyscraper with height 1000 between them.
+----------------------------------------------------------------
+
+
+
